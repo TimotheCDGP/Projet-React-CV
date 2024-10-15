@@ -1,4 +1,4 @@
 Group Members :
-BOUCENNA Yacine
-MANGIN Charles
-PEYREGNE Timothé
+-BOUCENNA Yacine
+-MANGIN Charles
+-PEYREGNE Timothé
