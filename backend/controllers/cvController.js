@@ -40,7 +40,7 @@ const updateCv = async (req, res) => {
 
         res.json(cv);
     } catch (error) {
-        res.status(500).json({ message: 'Server error' });
+        res.status(500).json({ message: error });
     }
 };
 
@@ -50,6 +50,7 @@ const getVisibleCvs = async (req, res) => {
         const cvs = await Cv.find({ visible: true }).populate('userId', 'name email');
         res.json(cvs);
     } catch (error) {
+        console.log(error)
         res.status(500).json({ message: 'Server error' });
     }
 };
