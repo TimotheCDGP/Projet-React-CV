@@ -89,4 +89,14 @@ const searchCvs = async (req, res) => {
     }
 };
 
-module.exports = { createCv, updateCv, getVisibleCvs, getCvById, searchCvs };
+// Obtenir tous les CVs d'un utilisateur connecté
+const getUserCvs = async (req, res) => {
+    try {
+        const cvs = await Cv.find({ userId: req.user.id }).populate('userId', 'name email');
+        res.json(cvs);
+    } catch (error) {
+        res.status(500).json({ message: 'Server error' });
+    }
+};
+
+module.exports = { createCv, updateCv, getVisibleCvs, getCvById, searchCvs, getUserCvs };

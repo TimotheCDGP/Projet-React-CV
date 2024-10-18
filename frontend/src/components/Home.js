@@ -19,7 +19,7 @@ const Home = () => {
           {/* Boutons conditionnels affichés si l'utilisateur est connecté */}
           <div>
             <button onClick={() => navigate('/cvs')}>Voir tous les CV</button>
-            <button onClick={() => navigate('/cvs')}>Voir mes CV</button>
+            <button onClick={() => navigate('/cvs/user')}>Voir mes CV</button>
             <button onClick={() => navigate('/cv/create')}>Créer un nouveau CV</button>
           </div>
           <p>Vous êtes connecté</p>

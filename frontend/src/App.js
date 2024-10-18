@@ -7,6 +7,7 @@ import CVList from './components/cv/CVList';
 import CreateCV from './components/cv/CreateCV';
 import EditCV from './components/cv/EditCV';
 import ViewCV from './components/cv/ViewCV';
+import UserCVList from './components/cv/UserCVList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cvs" element={<CVList />} />
+          <Route path="/cvs/user" element={<UserCVList />} />
           <Route path="/cv/create" element={<CreateCV />} />
           <Route path="/cv/edit/:id" element={<EditCV />} />
           <Route path="/cv/:id" element={<ViewCV />} />

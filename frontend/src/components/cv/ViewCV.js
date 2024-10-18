@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
-const ViewCV = () => {
+const ViewCVPublic = () => {
   const [cv, setCv] = useState({});
   const { id } = useParams();
 
@@ -22,9 +22,17 @@ const ViewCV = () => {
     fetchCV();
   }, [id]);
 
+  // Fonction pour formater la date et l'heure
   const formatDate = (dateString) => {
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return new Date(dateString).toLocaleDateString(undefined, options);
+    const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+    const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+    
+    const date = new Date(dateString);
+    
+    const formattedDate = date.toLocaleDateString(undefined, dateOptions);
+    const formattedTime = date.toLocaleTimeString(undefined, timeOptions);
+    
+    return `${formattedDate} à ${formattedTime}`;  // On combine la date et l'heure
   };
 
   return (
@@ -70,11 +78,14 @@ const ViewCV = () => {
       <p>Dernière mise à jour : {cv.updatedAt ? formatDate(cv.updatedAt) : 'Inconnue'}</p>
 
       <div>
-        <Link to="/">Menu Principal</Link>
+        <Link to="/cvs">Retour à la liste de CV</Link>
       </div>
 
+      <div>
+        <Link to="/">Menu Principal</Link>
+      </div>
     </div>
   );
 };
 
-export default ViewCV;
+export default ViewCVPublic;

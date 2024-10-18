@@ -154,6 +154,10 @@ const CreateCV = () => {
       </form>
 
       <div>
+        <Link to="/cvs">Retour à la liste de CV</Link>
+      </div>
+      
+      <div>
         <Link to="/">Menu Principal</Link>
       </div>
 
