@@ -1,31 +1,135 @@
-body {
-  font-family: Arial, sans-serif;
-}
+/* App.css */
 
-h2 {
+/* Styles globaux */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
   color: #333;
 }
 
+h1, h2, h3 {
+  color: #2c3e50;
+}
+
+/* Conteneurs principaux */
+div {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulaires */
 form {
-  max-width: 400px;
-  margin: 20px auto;
   display: flex;
   flex-direction: column;
 }
 
-form div {
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"], 
+input[type="textarea"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Boutons */
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Liens */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+/* Listes */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #e9ecef;
+}
+
+/* Éléments d'éducation et d'expérience */
+h3 {
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
-input {
-  padding: 8px;
-  font-size: 16px;
+/* Styles pour les recommandations */
+.recommendation {
+  background-color: #e9f7ef;
+  border-left: 5px solid #28a745;
+  padding: 10px;
+  margin: 10px 0;
 }
 
-button {
+.recommendation p {
+  margin: 5px 0;
+}
+
+.recommendation small {
+  display: block;
+  color: #666;
+}
+
+/* Styles de recherche */
+input[type="search"] {
   padding: 10px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: calc(100% - 130px);
+}
+
+.search-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-container button {
+  margin-left: 10px;
 }

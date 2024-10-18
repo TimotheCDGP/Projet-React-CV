@@ -8,7 +8,7 @@ const AddRecommendation = ({ cvId, onRecommendationAdded }) => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/recommendations', {
-        text: recommendationText,
+        message: recommendationText,
         cvId: cvId,
       }, {
         headers: {

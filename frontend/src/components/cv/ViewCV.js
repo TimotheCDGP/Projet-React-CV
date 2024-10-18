@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
 
-const ViewCVPublic = () => {
+const ViewCV = () => {
   const [cv, setCv] = useState({});
   const { id } = useParams();
 
@@ -88,4 +88,4 @@ const ViewCVPublic = () => {
   );
 };
 
-export default ViewCVPublic;
+export default ViewCV;
