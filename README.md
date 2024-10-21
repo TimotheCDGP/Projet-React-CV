@@ -1,10 +1,12 @@
-Fonctionne :
-* Inscription et login des utilisateurs
-* Ajout, modification (incluant ajout de commentaires) des CV sur une route sécurisée par JWT
-* Début de la logique Frontend
+# Group Members
 
-À faire :
-* Terminer l'imprémentation des templates des CV
-* Lier la partie Back au front
-* Déployer le projet en ligne
-- Éventuellement conteneuriser le projet 
+- BOUCENNA Yacine
+- MANGIN Charles
+- PEYREGNE Timothé
+
+# Fontionnalités :
+
+- Créer un compte
+- Se connecter
+- Créer / Ajouter des CV, les rendre visible ou non pour les autres utilisateurs
+- Ajouter des commentaires sur les CV des autres utilisateurs
